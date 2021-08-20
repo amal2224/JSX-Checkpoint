@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import imageInSrc from './imageInSrc.jpg';
+import './style.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <>
+    <div style={{
+                  border:"solid 1px black",
+                  maxWidth:"100vw"
+                }}>
+      <h1 className="title red">Your name here</h1>
+      <br/>
+      <img src={imageInSrc} alt='imageInSrc'
+            style={{
+                    width: '100%',
+                    height: '400px'
+                  }}
+      />
+      <br/>
+      <img src="/imageInPublic.jpg" alt='imageInPublic'
+            style={{           
+                    width:'100%',
+                    height:'600px'
+                  }}
+      />
     </div>
-  );
+
+    <video style={{
+                    width:'100%',
+                    height:'600px'
+                  }} controls>
+      <source src="/myVideo.mp4" type="video/mp4" />
+    </video>
+  </>
+          );
 }
 
 export default App;
